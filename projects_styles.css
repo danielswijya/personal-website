@@ -1,0 +1,69 @@
+/* Fonts Imports */
+@import url('https://fonts.googleapis.com/css2?family=Anta&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,500;1,500&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#first-section{
+  background-color: #1e1e1e;
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  height: 1060px;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  font-family: "Poppins";
+  height: 500vhs;
+}
+
+h1{
+    color: red;
+}
+
+canvas {
+  position: fixed;
+  left: 50%;
+  right: 50%;
+  max-height: 100vh;
+  max-width: 100vw;
+  transform: translate(-50%,-50%);
+}
+
+#navbar {
+  display: flex;
+  justify-content: space-evenly;
+  background: linear-gradient(to right, #1e1e1e 87%, white);
+  color: orange;
+  border-radius: 2%;
+  padding: 30px 0;
+  border-bottom: #76b900;
+  border-bottom-width: 3px;
+  align-items: center;
+}
+
+#navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: "Roboto Mono";
+}
+
+#navbar a:hover {
+  text-decoration: underline;
+  color: #636262;
+}
