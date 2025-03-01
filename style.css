@@ -484,7 +484,7 @@ button:hover {
 .project-page {
   display: flex;
   flex-direction: column;
-  background-color: #1e1e1e;
+  background-color: whitesmoke;
   margin: 0;
   padding: 0;
   overflow-x: hidden; /* Prevent horizontal scroll */
@@ -494,50 +494,43 @@ button:hover {
 .project-begin {
   display: flex;
   width: 100%;
-  height: 100vh; /* Full screen height */
+  height: 70vh; 
   align-items: center;
   overflow: hidden;
+  background-color: black;
 }
 
 /* First section styling */
-.project-preview {
-  background-color: #1e1e1e;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-top: 2px inset rgb(218, 218, 218);
-}
-
 .project-snippet {
-  flex: 1;
-  padding: 40px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Center text vertically */
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center text vertically */
+    align-items: center; /* Center text horizontally */
+    text-align: center; /* Align text within the container */
+    width: 100%; /* Ensure it spans the full width of its parent */
+    height: 100%; /* Ensure it fills the parent's height */
+    margin: 0; /* Remove unnecessary spacing */
+    padding: 0; /* Ensure no extra padding */
+    box-sizing: border-box; /* Include padding and borders in size calculations */
 }
 
-.project-image {
-  flex: 1;
-  background: url('/images/bostoncity.gif') center center/cover no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 100%;
-  height: 100%;
-  border: 3px solid #76b900;
-  border-radius: 8px;
-}
 
 /* Styling for the text in the first section */
 #projects_title_styles {
   margin-bottom: 70px;
+  border-left: 250px;
   font-family: "Exo 2", sans-serif;
   font-size: 50px;
   color: #f5f5f5;
-  border: 4px solid rgba(66, 65, 65, 0.549);
-  border-radius: 15px;
-  padding: 10px;
+  text-align: center;
 }
+
+.project-snippet h1{
+  font-size: 50px;
+  color: #f5f5f5;
+}
+
 
 .project-snippet p {
   font-size: 22px;
@@ -559,28 +552,29 @@ button:hover {
 .project-content {
   flex:2;
   padding: 60px;
-  background-color: #f5f5f5;
+  background-color: black;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  text-align: left;
+  text-align: center;
   height: 100%; /* Ensure it takes full height */
-  border: 1px rgb(70, 70, 70) dotted;
 }
 
 .project-content h2 {
-  margin-top: 30px;
+  margin-top: 15px;
   font-size: 30px;
   margin-bottom: 20px;
-  color: black;
+  color: whitesmoke;
+  text-align: center;
 }
 
 .project-content p {
   font-size: 15px;
   line-height: 1.6;
   margin-bottom: 15px;
-  color: black;
+  color: whitesmoke;
+  text-align: center;
 }
 
 .content-image {
