@@ -4,18 +4,9 @@ const projects = document.querySelector(".project");
 console.log(projects);
 
 const myName = document.getElementById("my-name");
-myName.textContent = "Daniel Sam Wijaya";
-myName.style.color = "white";
+myName.textContent = "Daniel is a mission-driven builder blending tech, empathy, and strategic curiosity to craft meaningful, user-first solutions across communities";
+myName.style.color = "rgb(58, 60, 58)";
 
-let numberOfClicks = 0;
-myName.addEventListener("click", function() {
-    if (numberOfClicks % 2 == 0){
-        myName.style.color = "black";  
-    }else {  
-        myName.style.color = "blue";  
-    }
-    numberOfClicks += 1;
-});
 
 const project1 = document.getElementById("project1");
 const project2 = document.getElementById("project2");
@@ -79,25 +70,25 @@ function hideShow2(){
  * The function `nowyouseeme` uses Intersection Observer to add a 'visible' class to elements when they
  * are 10% visible in the viewport.
  */
-function nowyouseeme(){
-    document.addEventListener("DOMContentLoaded", function () {
-        const featureItems = document.querySelectorAll('.feature-item');
+// function nowyouseeme(){
+//     document.addEventListener("DOMContentLoaded", function () {
+//         const featureItems = document.querySelectorAll('.feature-item');
     
-        const observerOptions = {
-            threshold: 0.1 // When 10% of the element is visible
-        };
+//         const observerOptions = {
+//             threshold: 0.1 // When 10% of the element is visible
+//         };
     
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    observer.unobserve(entry.target); // Stop observing once it's visible
-                }
-            });
-        }, observerOptions);
+//         const observer = new IntersectionObserver((entries, observer) => {
+//             entries.forEach(entry => {
+//                 if (entry.isIntersecting) {
+//                     entry.target.classList.add('visible');
+//                     observer.unobserve(entry.target); // Stop observing once it's visible
+//                 }
+//             });
+//         }, observerOptions);
     
-        featureItems.forEach(item => {
-            observer.observe(item); // Observe each feature item
-        });
-    });
-}
+//         featureItems.forEach(item => {
+//             observer.observe(item); // Observe each feature item
+//         });
+//     });
+// }
