@@ -66,29 +66,22 @@ function hideShow2(){
     }
 }
 
-/**
- * The function `nowyouseeme` uses Intersection Observer to add a 'visible' class to elements when they
- * are 10% visible in the viewport.
- */
-// function nowyouseeme(){
-//     document.addEventListener("DOMContentLoaded", function () {
-//         const featureItems = document.querySelectorAll('.feature-item');
-    
-//         const observerOptions = {
-//             threshold: 0.1 // When 10% of the element is visible
-//         };
-    
-//         const observer = new IntersectionObserver((entries, observer) => {
-//             entries.forEach(entry => {
-//                 if (entry.isIntersecting) {
-//                     entry.target.classList.add('visible');
-//                     observer.unobserve(entry.target); // Stop observing once it's visible
-//                 }
-//             });
-//         }, observerOptions);
-    
-//         featureItems.forEach(item => {
-//             observer.observe(item); // Observe each feature item
-//         });
-//     });
-// }
+const testimonials = [
+  { text: "Daniel is the kind of person who turns vision into action — thoughtful, creative, and driven.", author: "— Placeholder Name" },
+  { text: "Working with Daniel felt seamless and inspiring. He asks the right questions.", author: "— Colleague A" },
+  { text: "Daniel brings structure, care, and curiosity to every project.", author: "— Mentor B" }
+];
+let currentIndex = 0;
+function showTestimonial(index) {
+  const t = testimonials[index];
+  document.getElementById("testimonial-text").textContent = `“${t.text}”`;
+  document.getElementById("testimonial-author").textContent = t.author;
+}
+function prevTestimonial() {
+  currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
+  showTestimonial(currentIndex);
+}
+function nextTestimonial() {
+  currentIndex = (currentIndex + 1) % testimonials.length;
+  showTestimonial(currentIndex);
+}
