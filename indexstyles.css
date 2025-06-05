@@ -1,6 +1,6 @@
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #fff;
+    background-color: #e8f1f1;;
     margin: 0;
     padding: 0;
     color: #2c2c2c;
@@ -123,6 +123,22 @@ body {
       color: #ccc;
       font-size: 0.95rem;
     }
+
+.custom-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #9dc8ea; /* light grey */
+  color: black;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.custom-button:hover {
+  background-color: black;
+  color: white;
+}
 
 .custom-snap-container {
   display: flex;
@@ -295,7 +311,7 @@ body {
 
 .career-story-section {
   background-color: #f6fbf6;
-  padding: 3rem 2rem;
+  padding: 2rem 2rem;
 }
 
 .career-story-container {

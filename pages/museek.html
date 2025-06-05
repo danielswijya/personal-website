@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MuSeek – Project Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Lexend+Deca&display=swap" rel="stylesheet">
+  <link href="../individual_project.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    h1, h2 {
+      font-family: 'Lexend Deca', sans-serif;
+    }
+    .wrapper {
+      max-width: 1050px;
+      margin: 0 auto;
+      padding: 5rem 1.5rem 3rem;
+    }
+    .intro {
+      margin-bottom: 2rem;
+    }
+    .intro h1 {
+      font-size: 2.75rem;
+      margin-bottom: 0.75rem;
+    }
+    .intro p {
+      font-size: 1.125rem;
+      color: #fff;
+    }
+    .tag, .tag_tools {
+      display: inline-block;
+      background: #bbeec9;
+      color: #000;
+      font-size: 0.85rem;
+      padding: 0.3rem 0.75rem;
+      border-radius: 999px;
+      margin-top: 0.5rem;
+    }
+    section {
+      margin-bottom: 4rem;
+    }
+    .two-col {
+      display: grid;
+      grid-template-columns: 1.25fr 2.5fr;
+      gap: 2rem;
+    }
+    .two-col h2 {
+      margin-top: 0;
+    }
+    .col-heading {
+      min-height: 100%;
+      padding-right: 1rem;
+    }
+    .col-content p {
+      margin-bottom: 1.5rem;
+      line-height: 2;
+      color: #fff;
+      font-weight: 500;
+    }
+    figure {
+      margin: 0;
+    }
+    figure img {
+      width: 100%;
+      border-radius: 1rem;
+    }
+    figcaption {
+      font-size: 0.85rem;
+      color: #aaa;
+      margin-top: 0.5rem;
+    }
+    .back-link {
+      font-size: 0.95rem;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 2rem;
+      color: #fff;
+    }
+    .carousel {
+      position: relative;
+      max-width: 3600px;
+      margin: 1.5rem auto;
+      overflow: hidden;
+      border-radius: 2rem;
+      box-shadow: 0 10px 24px rgba(255, 255, 255, 0.15);
+    }
+    .carousel-images {
+      display: flex;
+      transition: transform 0.4s ease-in-out;
+    }
+    .carousel-images img {
+      width: 360px;
+      height: 700px;
+      object-fit: cover;
+    }
+    .carousel-button {
+      position: absolute;
+      bottom: 1rem;
+      left: 1rem;
+      background-color: rgba(255, 255, 255, 0.8);
+      border: none;
+      border-radius: 50%;
+      padding: 0.5rem 0.7rem;
+      cursor: pointer;
+      font-size: 1.5rem;
+      box-shadow: 0 2px 6px rgba(255,255,255,0.25);
+    }
+
+        .col-content p, .col-content table {
+      margin-bottom: 1.5rem;
+      line-height: 2;
+      color: #fff;
+      font-weight: 500;
+    }
+    .col-content table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .col-content th, .col-content td {
+      border: 1px solid #444;
+      padding: 0.75rem;
+      text-align: left;
+    }
+    .col-content th {
+      background-color: #111;
+    }
+
+    @keyframes hop {
+    0%, 100% {
+        transform: translateY(-50%) translateY(0);
+    }
+    50% {
+        transform: translateY(-50%) translateY(-10px);
+    }
+    }
+
+    .music-button {
+      position: fixed;
+      bottom: 1rem;
+      right: 1rem;
+      background: #ffcb05;
+      border: none;
+      border-radius: 50%;
+      padding: 0.6rem;
+      cursor: pointer;
+      font-size: 1.5rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      animation: hop 1.25s infinite ease-in-out;
+    }
+    .carousel-note {
+      color: #fff;
+      text-align: center;
+      margin-top: 1rem;
+      font-size: 0.9rem;
+    }
+    .museek {
+      color: #ffcb05;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <a href="../pages/work.html" class="back-link">← Back to Work</a>
+
+    <section class="intro">
+        <h1><span class="museek">🎶MuSeek</span> – the platform that helps artists seek their "Dream Team"</h1>
+      <h3>Fall 2024 • Team Ideation & PMReady • Web & Social Platform</h3>
+      <span class="tag_tools">Jira</span> <span class="tag_tools">Figma</span>
+      <p>
+        Struggling to find a music producer, a background voice artist, a boom mic operator, or even a sound mixer who aligns with your vibe and musical style? That’s where <span class="museek">MuSeek</span> comes in. <p>It’s a concept-stage passion project focused on reshaping how independent musicians connect not just with audiences—but with each other.</p>
+        <span class="museek">MuSeek</span> enables creators to upload raw demos, express their inspirations, and build momentum through community-driven tags and discovery paths.
+        <br><br><strong>Built on curiosity and passion at its core, it encourages music lovers to experience authenticity & future stars to find their 💫DREAM TEAM</strong>.
+      </p>
+    </section>
+
+    <section>
+      <div style="text-align: center;">
+        <div class="carousel" id="carousel">
+          <div class="carousel-images" id="carouselImages">
+            <img src="../images/museek_screen_1.png" alt="Demo Screen 1">
+            <img src="../images/museek_screen_2.png" alt="Demo Screen 2">
+            <img src="../images/museek_screen_3.png" alt="Demo Screen 3">
+          </div>
+        </div>
+        <p class="carousel-note"><strong>☝️Several Mockups included what MuSeek looks like ☝️</strong> </p>
+        <button class="music-button" onclick="toggleAudio()">💿</button>
+        <audio id="demoTune" src="../video/ocean-breeze-beat-by-jtwayne-213318.mp3"></audio></p>
+      </div>
+    </section>
+
+
+    <section>
+    <div class="two-col">
+        <div class="col-heading">
+            <h2>Problem Statement</h2>
+        </div>
+        <div class="col-content">
+            <p>
+                Emerging and independent artists struggle to find affordable, growth-oriented, and lasting creative collaboration platforms due to the industry’s emphasis on high-cost services, one-off transactions, and lack of mentorship or educational support.
+            </p>
+        </div>
+      </div>
+    </section>
+    
+    <section>
+      <div class="two-col">
+        <div class="col-heading">
+          <h2><u>Features</u></h2>
+        </div>
+        <div class="col-content">
+          <p>
+            • Weekly Top 10 Billboard<br>
+            • Inspiration-first profile creation for musicians<br>
+            • Simple 2-step upload flow for demos<br>
+            • Discovery algorithm based on preference & rating<br>
+            • Analytics dashboard for artists (plays, previews)<br>
+            • Built-in messaging for collaboration opportunities
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="col-content">
+        <h2 style="text-align:center">Competitive Analysis</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Competitor</th>
+              <th>Target Market</th>
+              <th>Market Share</th>
+              <th>Product</th>
+              <th>Strengths</th>
+              <th>Weaknesses</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Fiverr</td>
+              <td>Freelancers and businesses</td>
+              <td>0.7%</td>
+              <td>Marketplace for freelance services</td>
+              <td>Large user base, wide service range, trust features</td>
+              <td>High commission, transactional focus, lacks community</td>
+            </tr>
+            <tr>
+              <td>Sonicbids</td>
+              <td>Independent musicians seeking gigs</td>
+              <td>0.03%</td>
+              <td>Connects artists to venues and bands</td>
+              <td>Gig discovery, artist profiles</td>
+              <td>Limited tools for solo artists, weak networking</td>
+            </tr>
+            <tr>
+              <td>SoundBetter</td>
+              <td>Artists seeking premium production</td>
+              <td>0.09%</td>
+              <td>Hire professionals for music projects</td>
+              <td>High quality, Spotify-acquired, pro reputation</td>
+              <td>Expensive, job-based, no learning tools</td>
+            </tr>
+          </tbody>
+        </table>
+        <p style="margin-top: 1rem;">
+          Taken together, most platforms focus on transactional gigs, established professionals, or venue access—but rarely blend affordability, mentorship, and collaborative network-building the way <span class="museek">MuSeek</span> aims to do.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="two-col">
+        <div class="col-heading">
+          <h2><u>My Approach as Product Manager</u></h2>
+        </div>
+        <div class="col-content">
+          <p>
+            I approached <span class="museek">MuSeek</span> as an opportunity to lead as a Product Manager from end to end. I collaborated with fellow aspiring PMs to explore how independent musicians—especially students—struggle to find aligned collaborators. </p><p>I led our competitive analysis, designed the product’s OKRs, and helped frame user research into actionable insights. Using tools like <span class="figma"> Figma </span> and <span class="jira"> Jira </span>, I worked on user flows, early design mockups, and prioritized features based on feasibility, storytelling potential and effective timeline management. <span class="museek">MuSeek</span> taught me how to balance ambition with clarity and how to articulate an emotional journey through product.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="two-col">
+        <div class="col-heading">
+          <h2>🖼 Highlights from My Work</h2>
+        </div>
+        <div class="col-content">
+          <p>
+            Coming soon: wireframes, screenshots of the UI flow, tagging logic schema, and product roadmap visualization. These assets document the evolution from concept to implementation and showcase the storytelling-first direction of the platform.
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+
+  <script>
+    let currentIndex = 0;
+
+    function toggleAudio() {
+      const audio = document.getElementById('demoTune');
+      if (audio.paused) {
+        audio.play();
+      } else {
+        audio.pause();
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #111;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    }
+
+    h1, h2 {
+    font-family: 'Lexend Deca', sans-serif;
+    }
+
+    .wrapper {
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 5rem 1.5rem 3rem;
+    }
+
+    .intro {
+    margin-bottom: 2rem;
+    }
+
+    .intro h1 {
+    font-size: 2.75rem;
+    margin-bottom: 0.75rem;
+    }
+
+    .intro p {
+    font-size: 1.125rem;
+    color: #444;
+    }
+
+    .tag {
+    display: inline-block;
+    background: #bbc5ee;
+    color: #333;
+    font-size: 0.85rem;
+    padding: 0.3rem 0.75rem;
+    border-radius: 999px;
+    margin-top: 0.5rem;
+    }
+
+    .figma {
+      color: #ff7262;
+      font-weight: bold;
+    }
+    .jira {
+      color: #2684ff;
+      font-weight: bold;
+    }
+
+    .tag_tools {
+    display: inline-block;
+    background: #bbeec9;
+    color: #333;
+    font-size: 0.85rem;
+    padding: 0.3rem 0.75rem;
+    border-radius: 999px;
+    margin-top: 0.5rem;
+    }
+
+    section {
+    margin-bottom: 4rem;
+    }
+
+    .two-col {
+    display: grid;
+    grid-template-columns: 1.25fr 2.5fr;
+    gap: 2rem;
+    }
+
+    .two-col h2 {
+    margin-top: 0;
+    }
+
+    .col-heading {
+    min-height: 100%;
+    padding-right: 1rem;
+    }
+
+    .col-content p {
+    margin-bottom: 1.5rem;
+    line-height: 2;
+    color: #444;
+    font-weight: 500;
+    }
+
+    figure {
+    margin: 0;
+    }
+
+    figure img {
+    width: 100%;
+    border-radius: 1rem;
+    }
+
+    figcaption {
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 0.5rem;
+    }
+
+    .back-link {
+    font-size: 0.95rem;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 2rem;
+    color: #000;
+    }
