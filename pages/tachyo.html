@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Tachyo – Project Detail</title>
+<link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../individual_project.css" />
+<link rel="stylesheet" href="../indexstyles.css"/>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<style>
+    body {
+        background: linear-gradient(135deg, #181c1f 0%, #0f2027 100%);
+        font-family: 'Lexend Deca', 'Montserrat', Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        color: #fff;
+    }
+    .wrapper {
+        animation: fadeIn 1.2s;
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(30px);}
+        to { opacity: 1; transform: translateY(0);}
+    }
+    .glow-header {
+        animation: glow 3s infinite alternate;
+        color: #00ffb3;
+        text-shadow: 0 0 16px #00ffb3, 0 0 32px #00ffb3;
+        font-size: 2.4rem;
+        letter-spacing: 1px;
+        margin-bottom: 0.5rem;
+        transition: color 0.3s;
+    }
+    @keyframes glow {
+        0% { text-shadow: 0 0 16px #00ffb3, 0 0 32px #00ffb3; color: #00ffb3;}
+        50% { text-shadow: 0 0 32px #00ffb3, 0 0 64px #00ffb3; color: #fff;}
+        100% { text-shadow: 0 0 16px #00ffb3, 0 0 32px #00ffb3; color: #00ffb3;}
+    }
+    .intro {
+        margin-bottom: 2.5rem;
+    }
+    .tag, .tag_tools {
+        background: rgba(0,255,179,0.12);
+        color: #fff;
+        border-radius: 0.5rem;
+        padding: 0.2rem 0.7rem;
+        margin: 0.2rem 0.2rem 0.2rem 0;
+        font-size: 0.98rem;
+        display: inline-block;
+        font-weight: 500;
+        border: 1.5px solid #00ffb3;
+        box-shadow: 0 0 8px #00ffb3;
+        animation: popIn 0.7s;
+    }
+    @keyframes popIn {
+        from { transform: scale(0.8); opacity: 0;}
+        to { transform: scale(1); opacity: 1;}
+    }
+    .info-bar {
+        margin: 1.5rem 0 0.5rem;
+        font-size: 1.05rem;
+        color: #b2fff7;
+        display: flex;
+        gap: 1.2rem;
+        flex-wrap: wrap;
+    }
+    .role-content {
+        display: block;
+        animation: fadeIn 0.8s;
+        background: rgba(24, 28, 31, 0.7);
+        border-radius: 1.5rem;
+        box-shadow: 0 0 32px #00ffb3;
+        padding: 5.5rem 6vw 5rem 6vw;
+        margin-bottom: 3.5rem;
+        color: #fff;
+        max-width: 4000px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 1.18rem;
+        line-height: 1.85;
+        border: 2px solid #00ffb3;
+        transition: background 0.4s, color 0.4s, box-shadow 0.4s, border 0.4s;
+    }
+    h2 {
+        color: #00ffb3;
+        margin-top: 1.7rem;
+        margin-bottom: 0.7rem;
+        font-size: 1.35rem;
+        letter-spacing: 0.5px;
+        text-shadow: 0 0 8px #00ffb3;
+    }
+    .two-col {
+        display: grid;
+        grid-template-columns: 1.25fr 2.5fr;
+        gap: 2rem;
+        color: #fff;
+    }
+    .col-content {
+        background: rgba(0, 255, 179, 0.10);
+        border-radius: 1.2rem;
+        padding: 2.2rem 2rem;
+        color: #fff !important;
+        font-size: 1.13rem;
+        line-height: 1.85;
+        margin-bottom: 1.5rem;
+        transition: box-shadow 0.3s, background 0.3s;
+    }
+    .col-content-pm{
+        background: rgba(192, 204, 119, 0.968);
+        border-radius: 1.2rem;
+        padding: 2.2rem 2rem;
+        color: #fff !important;
+        font-size: 1.13rem;
+        line-height: 1.85;
+        margin-bottom: 1.5rem;
+        transition: box-shadow 0.3s, background 0.3s;
+    }
+    .col-content p, .col-content ul, .col-content li {
+        color: #fff !important;
+    }
+    ul {
+        margin: 0.7rem 0 1.2rem 0;
+    }
+    figure img {
+        transition: transform 0.3s, box-shadow 0.3s;
+        border-radius: 0.7rem;
+        max-width: 100%;
+        height: auto;
+        box-shadow: 0 0 16px #00ffb3;
+    }
+    figure img:hover {
+        transform: scale(1.04) rotate(-2deg);
+        box-shadow: 0 0 32px #00ffb3;
+    }
+    figcaption {
+        font-size: 0.97rem;
+        color: #b2fff7;
+        margin-top: 0.3rem;
+        text-align: center;
+        text-shadow: 0 0 4px #00ffb3;
+    }
+    @media (max-width: 900px) {
+        .role-content { padding: 1.2rem 0.7rem;}
+    }
+    .readme-window {
+        background: rgba(24, 28, 31, 0.95);
+        border: 2px solid #00ffb3;
+        border-radius: 1rem;
+        box-shadow: 0 0 24px #00ffb3;
+        color: #fff;
+        padding: 1.5rem 1.5rem 1.2rem 1.5rem;
+        margin: 2.5rem 0 1.5rem 0;
+        max-width: 100%;
+        overflow-x: auto;
+        font-family: 'Fira Mono', 'Consolas', monospace;
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+    .readme-window h3 {
+        color: #00ffb3;
+        margin-top: 0;
+        margin-bottom: 1rem;
+        font-size: 1.15rem;
+        text-shadow: 0 0 8px #00ffb3;
+    }
+</style>
+</head>
+<body>
+<div class="wrapper">
+    <a href="../pages/work.html" class="back-link" style="color:#00ffb3;text-shadow:0 0 8px #00ffb3;">← Back to all projects</a>
+    <div class="intro">
+        <h1 class="glow-header">🌱 Full-Stack Image Integration w/ OpenAI CLIP Model - Atomic Hands Summer Internship</h1>
+        <span class="tag">🟢 Full-Stack Developer (with PM Collaboration)</span>
+        <br>
+        <h3> Tech Stack Used:</h3>
+        <span class="tag_tools">Python</span>
+        <span class="tag_tools">React</span>
+        <span class="tag_tools">MongoDB</span>
+        <span class="tag_tools">GitLab CI/CD</span>
+        <span class="tag_tools">OpenAI CLIP</span>
+        <span class="tag_tools">OpenVerse API</span>
+        <span class="tag_tools">Wikimedia</span>
+        <span class="tag_tools">BabelNet / WordNet 3.1</span>
+        <div class="info-bar">
+            <div><strong>Project:</strong> Boston, MA (Remote)</div>
+            <div><strong>Timeframe:</strong> Jun – Aug 2025</div>
+            <div><strong>Category:</strong> EdTech • NLP • Computer Vision</div>
+        </div>
+    </div>
+
+    <!-- Developer Content ONLY -->
+    <div id="devContent" class="role-content">
+      <section>
+        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+            <img src="../images/openai.png" alt="OPEN AI" style="width:30%; max-width:220px; border-radius:0.5rem; margin-bottom:1.2rem;" />
+            <img src="../images/image_125.webp" alt="CLIP OPEN AI CLIP" style="width:50%; max-width:400px; border-radius:1rem; margin-bottom:1.2rem;" />
+        </div>
+        <div class="col-content">
+          <p>
+            <strong>As Full‑Stack Developer</strong>, I owned the semantic retrieval pipeline and validation tooling:
+            ingest WordNet/BabelNet terms → fetch CC‑licensed candidates (OpenVerse, Wikimedia) → embed with <strong>OpenAI CLIP</strong> → score/diversify → store to <strong>MongoDB</strong> for review. I maintained GitLab CI/CD, authored reproducible READMEs, and paired with educators to align model output with classroom use.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <h2>Technical Demo</h2>
+        <video controls style="width:100%; border-radius:1rem; box-shadow:0 0 24px #00ffb3;">
+          <source src="../video/Recording 2025-08-23 173744.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="readme-window">
+          <h3>README.md Preview</h3>
+          <div id="readme-preview" style="color:#fff; max-height: 400px; overflow-y: auto;"></div>
+        </div>
+        <script>
+          fetch('../docs/README.md')
+            .then(response => response.text())
+            .then(text => {
+              document.getElementById('readme-preview').innerHTML = marked.parse(text);
+            });
+        </script>
+      </section>
+
+      <section class="two-col">
+        <div class="col-heading">
+          <h2>Engineering Wins</h2>
+        </div>
+        <div class="col-content">
+          <ul style="padding-left:1.25rem; line-height:1.9; color:#b2fff7;">
+            <li><strong>Coverage:</strong> Achieved 98% term coverage by combining lemma+POS, BabelNet mapping, and fallback strategies.</li>
+            <li><strong>Relevance:</strong> 85%+ educator‑rated relevance using CLIP similarity scoring + light diversity filtering.</li>
+            <li><strong>Automation:</strong> ~95% manual reduction via scripted retrieval, scoring, and batch exports for review.</li>
+            <li><strong>Data model:</strong> Consolidated candidates (source, license, score, strategy) in MongoDB for traceability.</li>
+            <li><strong>DevEx:</strong> GitLab CI pipelines (lint/test), environment templating, and Markdown runbooks.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="two-col">
+        <div class="col-heading">
+          <h2>Stack & Architecture</h2>
+        </div>
+        <div class="col-content">
+          <ul style="padding-left:1.25rem; line-height:1.9; color:#b2fff7;">
+            <li><strong>Core:</strong> Python (pipeline, scoring), React (review UI), MongoDB (storage).</li>
+            <li><strong>Retrieval:</strong> OpenVerse + Wikimedia (CC‑licensed), optional ImageNet for nouns.</li>
+            <li><strong>NLP/CV:</strong> WordNet 3.1, BabelNet mapping, OpenAI CLIP embeddings for image/text similarity.</li>
+            <li><strong>Infra:</strong> GitLab CI/CD, env‑based configuration, reproducible local runs.</li>            
+          </ul>
+        </div>
+      </section>
+
+      <section class="two-col">
+        <div class="col-heading">
+          <h2>Developer Notes</h2>
+        </div>
+        <div class="col-content">
+          <ul style="padding-left:1.25rem; line-height:1.9; color:#b2fff7;">
+            <li><strong>Idempotent runs:</strong> skip re‑processing unless <code>--force</code> is passed.</li>
+            <li><strong>Licensing:</strong> capture license/source metadata; prefer CC‑BY/CC‑BY‑SA; log rejects.</li>
+            <li><strong>Validation loop:</strong> export top‑k with thumbnails for educator review; store decisions for retraining.</li>
+            <li><strong>Error handling:</strong> rate‑limit backoffs, partial retries, and defensive JSON parsing.</li>
+          </ul>
+        </div>
+      </section>
+
+
+      <section>
+        <h2 style="color:#f7ee91;">Product Management Collaboration</h2>
+        <div class="col-content-pm">
+          <p>
+            <strong>PM Touch:</strong> Worked closely with ASL educators and curriculum leads to define  improved MVP scope, prioritize clarity and coverage, and ensure technical decisions mapped to real classroom needs. Led short feedback cycles and wrote onboarding docs for future contributors.
+          </p>
+          <div style="display: flex; justify-content: center; margin: 1.5rem 0;">
+            <img src="../images/Tachyo Image Integration.svg" alt="Workflow Overview" style="max-width: 1500px; width: 100%; border-radius: 1rem; box-shadow: 0 0 16px white; background-color: white;">
+        </div>
+          <p>
+            <strong>Impact:</strong> Enabled educators to find relevant, high-quality images for over 300+ ASL terms, enhancing lesson plans and student engagement. The project laid groundwork for future AI‑assisted content curation in educational settings.
+          </p>
+        </div>
+      </section>
+      
+      <section>
+        <h2>Reflection</h2>
+        <p>
+          The hardest part was aligning “model‑good” with “teacher‑useful.” Here, I experienced first-hand integration across several open repos, APIs, and ultimately utilize LLMs of Pre-Trained Computer Vision to match the criteria we have.. Tight review loops and explicit rubrics closed that gap.
+        </p>
+        <a href="../pages/work.html" class="back-link" style="color:#00ffb3;text-shadow:0 0 8px #00ffb3;">← Back to all projects</a>
+      </section>
+
+    </div>
+</div>
+</body>
+</html>
